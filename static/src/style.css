@@ -1,0 +1,227 @@
+:root {
+  --background: linear-gradient(70deg, #16093b 18.43%, #221228 52.22%);
+  --padding: 2em 4em;
+  --button: linear-gradient(
+    72.35deg,
+    rgb(128, 26, 230) 15.89%,
+    rgb(162, 26, 230) 89.75%
+  );
+  --button-hover: linear-gradient(
+    72.35deg,
+    rgb(80, 19, 140) 15.89%,
+    rgb(74, 13, 104) 89.75%
+  );
+  --text-hover: gray;
+  --font: Inter;
+  --bottom-space-1: 1rem;
+  --bottom-space-2: 2rem;
+  --bottom-space-4: 4rem;
+  --bottom-space-6: 6rem;
+  --top-space-1: 1rem;
+  --top-space-2: 2rem;
+  --top-space-4: 4rem;
+  --top-space-6: 6rem;
+  --ledding: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: hsl(0, 78%, 98%);
+  font-family: Inter;
+  letter-spacing: -1px;
+  background: var(--background);
+  /* width: 100%;  */
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  height: 150vh;
+  /* background-repeat: repeat-y; */
+}
+.wrapper {
+  display: flex;
+  width: 100%;
+  /* margin: auto; */
+  margin-top: var(--top-space-2);
+  padding: var(--padding);
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: var(--bottom-space-2);
+}
+nav > a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+nav > a:hover {
+  text-decoration: none;
+  color: var(--text-hover);
+}
+h1 {
+  font-size: 3.2rem;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.text {
+  font-size: 1.1rem;
+  margin-bottom: var(--bottom-space-2);
+  margin-top: var(--top-space-1);
+  color: rgb(204, 176, 218);
+  opacity: 70;
+}
+form {
+  display: flex;
+  gap: 0.2em;
+}
+input {
+  padding: 0.8em 1.6em;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: var(--bottom-space-2);
+}
+input[type="submit"] {
+  background: var(--button);
+  color:  white;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: var(--button-hover);
+  color: white;
+}
+h3 {
+  font-size: 1.7rem;
+  margin-bottom: var(--bottom-space-2);
+}
+.main-book {
+  display: flex;
+  /* width: 60%; */
+  width: fit-content;
+  padding-block: 2em;
+  padding-inline: -1em;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  gap: 1em;
+  border-radius: 10px;
+  margin-bottom: calc(var(--bottom-space-2) + 1rem);
+}
+.main-book .right {
+  width: 50%;
+  text-transform: capitalize;
+  /* font-size: 1.1rem; */
+}
+.main-book .left {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+}
+.main-book .left img {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.main-book p {
+  padding-bottom: 0.7em;
+}
+.book,
+.author {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+.card img {
+  /* height: 80%; */
+  object-fit: contain;
+  aspect-ratio: 3/5.5;
+}
+.card {
+  height: 500px;
+  width: 250px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1em 1.2em;
+  gap: 1.2rem;
+  text-transform: capitalize;
+  color: rgb(220, 220, 220);
+  border-radius: 10px;
+
+  background-color: blueviolet;
+}
+h1,
+h3 {
+  text-align: center;
+}
+
+/* Home */
+.book-card,
+.author-card {
+  font-size: 0.9rem;
+  padding-right: 0.2rem;
+  color: white;
+}
+.carousel-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-top: 2em;
+  margin-bottom: 2rem;
+}
+.carousel-home p {
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    padding: 1em 2em;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
+    color: white;
+  }
+  .text {
+    text-align: center;
+  }
+  h3 {
+    width: 70%;
+    text-align: center;
+    margin-inline: auto;
+  }
+  .carousel {
+    flex-direction: column;
+    gap: 2em;
+    /* width: 100%; */
+  }
+  .card {
+    width: 420px;
+  }
+  .card img {
+    height: 80%;
+    object-fit: contain;
+    aspect-ratio: 3/4;
+  }
+  .card-seconday,
+  .card-main p {
+    font-size: 0.8rem;
+  }
+}
